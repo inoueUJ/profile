@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css" />
+    <link rel="stylesheet" href="style.css" />
+    <title>My Portfolio</title>
+  </head>
+  <body>
+    <header>
+      <section class="header-container">
+        <h1 class="header__title">Yuji Inoue</h1>
+        <div class="header__nav-container">
+          <ul id="header__nav-container__lists">
+            <li class="header__nav-container__lists-item">
+              <a class="nav-link" href="#home">Home</a>
+            </li>
+            <li class="header__nav-container__lists-item">
+              <a class="nav-link" href="#aboutme">About</a>
+            </li>
+            <li class="header__nav-container__lists-item">
+              <a class="nav-link" href="#gallery">Gallery</a>
+            </li>
+          </ul>
+          <div id="small-menu">
+            <span class="bar" id="bar1"></span>
+            <span class="bar" id="bar2"></span>
+            <span class="bar" id="bar3"></span>
+          </div>
+        </div>
+      </section>
+    </header>
+    <section id="home">
+      <div class="home-opacity">
+        <div class="home-container">
+          <div id="home__discription">
+            <h2 class="home__discription__name">YujiInoue</h2>
+            <p class="home__discription__sub-title">Javascript Portfolio</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /home -->
+    <section id="aboutme">
+      <div class="aboutme-container">
+        <h2 class="aboutme__title">About me</h2>
+        <div class="aboutme__details">
+          <div class="aboutme__q-and-a">
+            <p class="aboutme__question">Name</p>
+            <p class="aboutme__answer">井上祐志</p>
+          </div>
+          <div class="aboutme__q-and-a">
+            <p class="aboutme__question">Age</p>
+            <p class="aboutme__answer">18</p>
+          </div>
+          <div class="aboutme__q-and-a">
+            <p class="aboutme__question">Born in...</p>
+            <p class="aboutme__answer">福岡</p>
+          </div>
+          <div class="aboutme__q-and-a">
+            <p class="aboutme__question">University</p>
+            <p class="aboutme__answer">大原簿記公務員専門学校</p>
+          </div>
+          <div class="aboutme__q-and-a">
+            <p class="aboutme__question">Faculty</p>
+            <p class="aboutme__answer">
+              学部: 情報IT分野<br />学科: システム開発コース
+            </p>
+          </div>
+          <div class="aboutme__q-and-a">
+            <p class="aboutme__question">Grade</p>
+            <p class="aboutme__answer">1年</p>
+          </div>
+          <div class="aboutme__q-and-a">
+            <p class="aboutme__question">Hobby</p>
+            <p class="aboutme__answer" id="aboutme__answer__trip">サッカー<br>好きなクラブチーム</p>
+            <div id="aboutme__answer__countries">
+              <!-- JSで管理 -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /aboutme -->
+    <section id="gallery">
+      <div class="gallery-container">
+        <div class="gallery__title">Gellery</div>
+        <div class="gallery__slides">
+          <span id="gallery__slide__arrow-left">⬅︎</span>
+          <img src="" alt="gallery-slide" id="gallery__slide" />
+          <span id="gallery__slide__arrow-right">➡︎</span>
+        </div>
+        <div id="gallery__slide__discription"></div>
+      </div>
+    </section>
+    <!-- /gallery -->
+    <footer class="footer-discription">
+      <small>&copy; 2021 Yuji Inoue, All Rights Reserved.</small>
+    </footer>
+
+    <script src="main.js"></script>
+  </body>
+</html>

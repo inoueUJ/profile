@@ -1,0 +1,382 @@
+/* 設定 */
+html {
+  /* scroll-behavior: smooth;
+  scroll-padding-top: 4rem; */
+  letter-spacing: 0.5px;
+  color: #222;
+  font-weight: bold;
+  font-family: MercariSans-Bold, Avenir-Black, Arial, TazuganeGothicStdN-Bold,
+    "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+/* header */
+header {
+  color: white;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  z-index: 10;
+  box-sizing: border-box;
+}
+
+.header-container {
+  width: 80%;
+  height: 4rem;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__nav-container {
+  width: max-content;
+  display: flex;
+}
+
+#header__nav-container__lists {
+  height: 100%;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+}
+
+.header__nav-container__lists-item:not(:last-of-type) {
+  margin-right: 2rem;
+}
+
+#small-menu {
+  display: none;
+}
+
+@media screen and (max-width: 950px) {
+  #header__nav-container__lists {
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 5rem 3rem 0;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: black;
+    transform: translateX(10rem);
+    transition: 1s;
+  }
+  #header__nav-container__lists.open {
+    transform: translateX(0);
+  }
+  .header__nav-container__lists-item:not(:last-of-type) {
+    margin-right: 0;
+    margin-bottom: 2rem;
+  }
+  #small-menu {
+    height: 1.5rem;
+    width: 2rem;
+    display: block;
+    position: relative;
+  }
+
+  .bar {
+    border: 1px solid white;
+    border-radius: 25%;
+    width: 100%;
+    position: absolute;
+  }
+
+  #bar1 {
+    top: 0;
+    transition: 1s;
+  }
+
+  #bar2 {
+    top: 50%;
+    transform: translateY(-50%);
+    transition: 1s;
+  }
+
+  #bar3 {
+    bottom: 0;
+    transition: 1s;
+  }
+
+  #bar1.open {
+    transform: rotate(-45deg);
+    top: 0.7rem;
+  }
+  #bar2.open {
+    transform: translateX(1rem);
+    opacity: 0;
+  }
+  #bar3.open {
+    transform: rotate(45deg);
+    bottom: 0.7rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .header-container {
+    width: 90%;
+  }
+}
+
+/* home */
+#home {
+  color: white;
+  height: 100vh;
+  width: 100%;
+  background: url("./images/jikoshoukai.jpg") center bottom / cover no-repeat;
+}
+
+.home-opacity {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.home-container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+#home__discription {
+  opacity: 0;
+  padding-top: 10rem;
+  width: max-content;
+  transition: 3s;
+  transform: translateY(-4rem) rotateY(-180deg);
+}
+
+#home__discription.fadein {
+  opacity: 1;
+  transform: translateY(0) rotateY(0);
+}
+
+.home__discription__sub-title {
+  font-weight: bold;
+}
+
+@media screen and (max-width: 500px) {
+  .home-container {
+    width: 90%;
+  }
+}
+
+/* aboutme */
+.aboutme-container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 3rem 0 0;
+}
+
+.aboutme__title {
+  font-size: 2em;
+  border-bottom: 0.1rem solid #333;
+}
+
+.aboutme__details {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.aboutme__q-and-a {
+  width: 30%;
+  margin-top: 4rem;
+}
+
+.aboutme__question {
+  border-bottom: 0.1rem solid #333;
+  font-size: 1.5em;
+  margin-bottom: 3rem;
+  width: 90%;
+}
+
+.aboutme__answer {
+  font-size: 1.2em;
+  opacity: 0;
+  transform: translateX(5rem);
+  transition: all 1.5s;
+  width: 90%;
+}
+
+.aboutme__answer.seen {
+  opacity: 1;
+  height: max-content;
+  width: 90%;
+  transform: translateX(0);
+}
+
+#aboutme__answer__trip {
+  margin-bottom: 2rem;
+  border-bottom: #333 solid 0.1rem;
+  width: 90%;
+}
+
+#aboutme__answer__trip::after {
+  content: "";
+  width: 0.5rem;
+  height: 0.5rem;
+  border-top: #333 solid 0.2rem;
+  border-right: #333 solid 0.2rem;
+  position: absolute;
+  top: 0.8rem;
+  right: 1rem;
+  transform: rotate(-45deg);
+  transition: 1s;
+}
+
+#aboutme__answer__trip.open::after {
+  transform: rotate(135deg);
+}
+
+#aboutme__answer__countries {
+  opacity: 0;
+  height: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  transition: 1s;
+}
+
+#aboutme__answer__countries.open {
+  opacity: 1;
+  height: max-content;
+  transition: 0.5s;
+  padding: 2rem 0 3rem;
+}
+
+.aboutme__answer__country {
+  width: 30%;
+  opacity: 0;
+  height: 0;
+  margin-bottom: 0;
+  transition: 0.5s;
+}
+
+.aboutme__answer__country.open {
+  width: 30%;
+  opacity: 1;
+  height: max-content;
+  margin-bottom: 2rem;
+  transition: 2s;
+}
+
+.aboutme__answer__country-img {
+  width: 30%;
+  z-index: 1;
+}
+
+@media screen and (max-width: 950px) {
+  .aboutme__q-and-a {
+    width: 45%;
+  }
+  .aboutme__answer__country {
+    width: 45%;
+  }
+  .aboutme__answer__country.open {
+    width: 45%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .aboutme-container {
+    width: 90%;
+  }
+  .aboutme__q-and-a {
+    width: 100%;
+  }
+}
+
+/* gallery */
+#gallery {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.gallery-container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 3rem 0;
+}
+
+.gallery__title {
+  font-size: 2em;
+  border-bottom: 0.1rem solid #333;
+}
+
+.gallery__slides {
+  margin: 5rem 0;
+  display: inline-flex;
+  position: relative;
+}
+
+#gallery__slide__arrow-left {
+  position: absolute;
+  left: 20%;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2em;
+}
+
+#gallery__slide {
+  width: 40%;
+  margin: 0 auto;
+  display: inline-block;
+}
+
+#gallery__slide__arrow-right {
+  position: absolute;
+  right: 20%;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2em;
+}
+
+#gallery__slide__discription {
+  width: 100%;
+  text-align: center;
+}
+
+@media screen and (max-width: 950px) {
+  #gallery__slide__arrow-left {
+    left: 10%;
+  }
+  #gallery__slide {
+    width: 60%;
+  }
+  #gallery__slide__arrow-right {
+    right: 10%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .gallery-container {
+    width: 90%;
+  }
+  #gallery__slide__arrow-left {
+    left: 0;
+  }
+  #gallery__slide {
+    width: 80%;
+  }
+  #gallery__slide__arrow-right {
+    right: 0;
+  }
+}
+
+/* footer */
+.footer-discription {
+  color: white;
+  height: 5rem;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
