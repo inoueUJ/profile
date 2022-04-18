@@ -99,13 +99,13 @@ const galleryDiscription = document.getElementById(
 
 // 写真の情報
 let slideInfo = [
-  { image: "uyuni.jpg", text: "ボリビア・ウユニ塩湖"},
-  { image: "yakusugi.jpg", text: "日本・屋久島" },
-  { image: "beri.jpg", text: "ベリーズ・ブルーホール" },
-  { image: "orora.jpg", text: "カナダ・イエローナイフのオーロラ" },
-  { image: "ante.jpg", text: "アメリカ・アンテロープ" },
-  { image: "iguasu.jpg", text: "アルゼンチン・イグアスの滝" },
-  { image: "buruaisu.jpg", text: "アイスランド・ブルーアイスケイブ" },
+  { image: "umakuiku.jpg", text: "きっとうまくいく"},
+  { image: "syanku.jpg", text: "ショーシャンクの空に" },
+  { image: "sixs.jpg", text: "シックスセンス" },
+  { image: "otona.jpg", text: "大人帝国の逆襲" },
+  { image: "saikyo.jpg", text: "最強のふたり" },
+  { image: "seven.jpg", text: "セブン" },
+  { image: "net.jpg", text: "ソーシャルネットワーク" },
 ];
 
 // 初期値
